@@ -1,6 +1,8 @@
 ember-fetch-jsonp
 ==============================================================================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Duder-onomy/ember-fetch-jsonp.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/Duder-onomy/ember-fetch-jsonp.svg?branch=master)](https://travis-ci.org/Duder-onomy/ember-fetch-jsonp)
 
 Adds [fetch-jsonp](https://github.com/camsong/fetch-jsonp) to ember apps via:
