@@ -1,6 +1,6 @@
 {
   "name": "ember-fetch-jsonp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Adds importable fetch-jsonp to ember apps",
   "keywords": [
     "ember-addon"
