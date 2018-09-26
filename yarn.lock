@@ -2316,12 +2316,12 @@ cli-spinners@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/cli-spinners/-/cli-spinners-1.1.0.tgz#f1847b168844d917a671eb9d147e3df497c90d06"
 
-cli-table2@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/cli-table2/-/cli-table2-0.2.0.tgz#2d1ef7f218a0e786e214540562d4bd177fe32d97"
+cli-table3@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/cli-table3/-/cli-table3-0.5.1.tgz#0252372d94dfc40dbd8df06005f48f31f656f202"
   dependencies:
-    lodash "^3.10.1"
-    string-width "^1.0.1"
+    object-assign "^4.1.0"
+    string-width "^2.1.1"
   optionalDependencies:
     colors "^1.1.2"
 
@@ -3181,22 +3181,23 @@ ember-try-config@^3.0.0:
     rsvp "^4.8.1"
     semver "^5.5.0"
 
-ember-try@1.0.0-beta.3:
-  version "1.0.0-beta.3"
-  resolved "https://registry.yarnpkg.com/ember-try/-/ember-try-1.0.0-beta.3.tgz#04da09ba2d57f0fe3a7174acff0dc1add2760855"
+ember-try@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/ember-try/-/ember-try-1.1.0.tgz#194d5843a79b5a9fc0e4c07445ebc18c08a91e78"
   dependencies:
     chalk "^2.3.0"
-    cli-table2 "^0.2.0"
+    cli-table3 "^0.5.1"
     core-object "^3.1.5"
     debug "^3.1.0"
     ember-try-config "^3.0.0"
-    execa "^0.10.0"
+    execa "^1.0.0"
     extend "^3.0.0"
     fs-extra "^5.0.0"
     promise-map-series "^0.2.1"
     resolve "^1.1.6"
     rimraf "^2.3.2"
     rsvp "^4.7.0"
+    walk-sync "^0.3.3"
 
 emit-function@0.0.2:
   version "0.0.2"
@@ -5372,10 +5373,6 @@ lodash.values@~2.3.0:
 lodash@3.8.0:
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.8.0.tgz#376eb98bdcd9382a9365c33c4cb8250de1325b91"
-
-lodash@^3.10.1:
-  version "3.10.1"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
 lodash@^4.14.0, lodash@^4.17.4, lodash@^4.3.0, lodash@^4.6.1:
   version "4.17.5"
@@ -7706,6 +7703,13 @@ walk-sync@0.3.2, walk-sync@^0.3.0, walk-sync@^0.3.1, walk-sync@^0.3.2:
 walk-sync@^0.2.5, walk-sync@^0.2.7:
   version "0.2.7"
   resolved "https://registry.yarnpkg.com/walk-sync/-/walk-sync-0.2.7.tgz#b49be4ee6867657aeb736978b56a29d10fa39969"
+  dependencies:
+    ensure-posix-path "^1.0.0"
+    matcher-collection "^1.0.0"
+
+walk-sync@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/walk-sync/-/walk-sync-0.3.3.tgz#1e9f12cd4fe6e0e6d4a0715b5cc7e30711d43cd1"
   dependencies:
     ensure-posix-path "^1.0.0"
     matcher-collection "^1.0.0"
