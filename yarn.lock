@@ -3511,10 +3511,10 @@ ember-cli-version-checker@^3.1.3:
     resolve-package-path "^1.2.6"
     semver "^5.6.0"
 
-ember-cli@3.10.0:
-  version "3.10.0"
-  resolved "https://registry.yarnpkg.com/ember-cli/-/ember-cli-3.10.0.tgz#69f0da598467091acf76d625dc382bab4b18395a"
-  integrity sha512-e5L4hL9JZkdSADnf/njKeaIsbfDSJydEbHxxxsVJG4NDfp2zQ0AwLsp7Z7tSzVSCdzPW6sxMLGOj6og4OuX6HQ==
+ember-cli@3.10.1:
+  version "3.10.1"
+  resolved "https://registry.yarnpkg.com/ember-cli/-/ember-cli-3.10.1.tgz#068b63bab00ec8a229097d45b809ccc5e1a9dd53"
+  integrity sha512-MQdZAxkwSR2wGJhVMP0Wm7cSYXfMW0Hku/kWtqDm1Ig1dIcWWRpTNxQ12uxBSiE8uQNrXpF3cl5ZDpMVnhbdqw==
   dependencies:
     "@babel/core" "^7.4.3"
     "@babel/plugin-transform-modules-amd" "^7.2.0"
@@ -5776,15 +5776,7 @@ lodash.values@~2.3.0:
   dependencies:
     lodash.keys "~2.3.0"
 
-lodash@^4.14.0, lodash@^4.17.4, lodash@^4.6.1:
-  version "4.17.5"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
-
-lodash@^4.17.10:
-  version "4.17.10"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
-
-lodash@^4.17.11, lodash@^4.17.5:
+lodash@^4.14.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.6.1:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
   integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
