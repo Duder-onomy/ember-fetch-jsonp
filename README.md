@@ -3,9 +3,11 @@
 ---
 This lib is deprecated in favor of using ember-auto-import and installing fetch-jsonp directly.
 This might look something like:
-`yarn add ember-auto-import`
-`yarn add fetch-jsonp`
-Then you can: 
+
+* `yarn add ember-auto-import`
+* `yarn add fetch-jsonp`
+
+Then you can:
 ```
 import fetchJsonp from 'fetch-jsonp';
 ```
