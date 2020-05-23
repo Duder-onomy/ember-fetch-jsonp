@@ -1,10 +1,10 @@
 ---
 language: node_js
 node_js:
-  - "8"
+  # we recommend testing addons with the same minimum supported node version as Ember CLI
+  # so that your addon works for all apps
   - "10"
 
-sudo: required
 dist: trusty
 
 addons:
@@ -22,25 +22,42 @@ env:
     # - SCRIPT=test:fastboot
     # - SCRIPT=test:node
 
-matrix:
+branches:
+  only:
+    - master
+    # npm version tags
+    - /^v\d+\.\d+\.\d+/
+
+jobs:
   fast_finish: true
   allow_failures:
     - env: EMBER_TRY_SCENARIO=ember-canary
 
-before_install:
-  - sudo chown root /opt/google/chrome/chrome-sandbox
-  - sudo chmod 4755 /opt/google/chrome/chrome-sandbox
-  - curl -o- -L https://yarnpkg.com/install.sh | bash
-  - export PATH=$HOME/.yarn/bin:$PATH
+  include:
+    # runs linting and tests with current locked deps
+    - stage: "Tests"
+      name: "Tests"
+      script:
+        - yarn lint
+        - yarn test:ember
 
-install:
-  - yarn install --no-lockfile --non-interactive
+    - stage: "Additional Tests"
+      name: "Floating Dependencies"
+      before_script:
+        - ./node_modules/.bin/greenkeeper-lockfile-update
+      install:
+        - yarn install --no-lockfile --non-interactive
+      script:
+        - yarn test:ember
+      after_script:
+        - ./node_modules/.bin/greenkeeper-lockfile-upload
 
-before_script:
-  - ./node_modules/.bin/greenkeeper-lockfile-update
-
-script:
-  - yarn run $SCRIPT
-
-after_script:
-  - ./node_modules/.bin/greenkeeper-lockfile-upload
+    # we recommend new addons test the current and previous LTS
+    # as well as latest stable release (bonus points to beta/canary)
+    - env: EMBER_TRY_SCENARIO=ember-lts-3.12
+    - env: EMBER_TRY_SCENARIO=ember-lts-3.16
+    - env: EMBER_TRY_SCENARIO=ember-release
+    - env: EMBER_TRY_SCENARIO=ember-beta
+    - env: EMBER_TRY_SCENARIO=ember-canary
+    - env: EMBER_TRY_SCENARIO=ember-default-with-jquery
+    - env: EMBER_TRY_SCENARIO=ember-classic
